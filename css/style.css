@@ -1,8 +1,4 @@
-/* -------------------------------- 
-
-Primary style
-
--------------------------------- */
+/* Primary style */
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -23,42 +19,29 @@ a {
   text-decoration: none;
 }
 
-/* -------------------------------- 
-
-Patterns - reusable parts of our design
-
--------------------------------- */
+/* Patterns - reusable parts of our design */
 .cd-btn {
-  display: inline-block;
   padding: 1.6em 2.4em;
   font-size: 1.4rem;
   letter-spacing: .15em;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: bold;
   text-transform: uppercase;
   background-color: #a5c4bc;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition: box-shadow 0.3s;
-  -moz-transition: box-shadow 0.3s;
   transition: box-shadow 0.3s;
 }
 .no-touch .cd-btn:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* -------------------------------- 
-
-Typography
-
--------------------------------- */
+/* Typography */
 h1 {
   font-size: 2.6rem;
   line-height: 1;
   margin-bottom: 1em;
   font-family: "IM Fell Double Pica", serif;
-  font-style: italic;
+  padding: 5%;
 }
 @media only screen and (min-width: 768px) {
   h1 {
@@ -66,11 +49,28 @@ h1 {
   }
 }
 
-/* -------------------------------- 
+h2 {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 1em;
+  font-family: "IM Fell Double Pica", serif;
+  padding: 2%;
+  display: flex;
+  justify-content: flex-start;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
 
-Main Content
+p{
+  padding: 2%;
+  margin-bottom: 2%;
+  line-height: 120%;
+}
 
--------------------------------- */
+/* Main Content */
 .cd-main-content {
   position: relative;
   z-index: 1;
@@ -80,18 +80,16 @@ Main Content
   display: table;
   background-color: #e4dcca;
 }
-.cd-main-content .center {
+.cd-main-content .Principale {
   /* vertically align inside parent element */
-  display: table-cell;
-  vertical-align: middle;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
-/* -------------------------------- 
+/* Modal window */
 
-Modal window 
-
--------------------------------- */
 .cd-modal {
   position: fixed;
   top: 0;
@@ -104,16 +102,12 @@ Modal window
   background-size: cover;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
-  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
   transition: opacity 0.3s 0s, visibility 0s 0.3s;
 }
 .cd-modal .modal-content {
   height: 100%;
   overflow-y: auto;
   color: #e4dcca;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
 }
@@ -152,13 +146,7 @@ Modal window
   white-space: nowrap;
   visibility: hidden;
   opacity: 0;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
   transform: scale(0);
-  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
-  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
   transition: transform 0.3s 0s, visibility 0s 0.3s, opacity 0.3s 0s;
 }
 .no-touch .cd-modal .modal-close:hover {
@@ -167,8 +155,6 @@ Modal window
 .cd-modal.visible {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: opacity 0.7s, visibility 0s;
-  -moz-transition: opacity 0.7s, visibility 0s;
   transition: opacity 0.7s, visibility 0s;
 }
 .cd-modal.visible .modal-content {
@@ -178,13 +164,7 @@ Modal window
 .cd-modal.visible .modal-close {
   visibility: visible;
   opacity: 1;
-  -webkit-transition: -webkit-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
-  -moz-transition: -moz-transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
   transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
   transform: scale(1);
 }
 @media only screen and (min-width: 1100px) {
@@ -200,11 +180,8 @@ Modal window
   }
 }
 
-/* -------------------------------- 
+/* Transition Layer */
 
-Transition Layer 
-
--------------------------------- */
 .cd-transition-layer {
   position: fixed;
   top: 0;
@@ -220,10 +197,6 @@ Transition Layer
   position: absolute;
   left: 50%;
   top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-2%);
-  -moz-transform: translateY(-50%) translateX(-2%);
-  -ms-transform: translateY(-50%) translateX(-2%);
-  -o-transform: translateY(-50%) translateX(-2%);
   transform: translateY(-50%) translateX(-2%);
   /* its dimentions will be overwritten using jQuery to proportionally fit the viewport */
   height: 100%;
@@ -237,19 +210,11 @@ Transition Layer
   visibility: visible;
 }
 .cd-transition-layer.opening .bg-layer {
-  -webkit-animation: cd-sequence 0.8s steps(24);
-  -moz-animation: cd-sequence 0.8s steps(24);
   animation: cd-sequence 0.8s steps(24);
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .cd-transition-layer.closing .bg-layer {
-  -webkit-animation: cd-sequence-reverse 0.8s steps(24);
-  -moz-animation: cd-sequence-reverse 0.8s steps(24);
   animation: cd-sequence-reverse 0.8s steps(24);
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .no-cssanimations .cd-transition-layer {
@@ -265,74 +230,22 @@ Transition Layer
 
 }
 
-
-@-webkit-keyframes cd-sequence {
-  0% {
-    /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
-    -webkit-transform: translateY(-50%) translateX(-2%);
-  }
-  100% {
-    /* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
-    -webkit-transform: translateY(-50%) translateX(-98%);
-  }
-}
-@-moz-keyframes cd-sequence {
-  0% {
-    /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
-    -moz-transform: translateY(-50%) translateX(-2%);
-  }
-  100% {
-    /* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
-    -moz-transform: translateY(-50%) translateX(-98%);
-  }
-}
 @keyframes cd-sequence {
   0% {
     /* translateX(-2%) is used to horizontally center the first frame inside the viewport */
-    -webkit-transform: translateY(-50%) translateX(-2%);
-    -moz-transform: translateY(-50%) translateX(-2%);
-    -ms-transform: translateY(-50%) translateX(-2%);
-    -o-transform: translateY(-50%) translateX(-2%);
     transform: translateY(-50%) translateX(-2%);
   }
   100% {
     /* translateX(-98%) (2% + 96) is used to horizontally center the last frame inside the viewport  */
-    -webkit-transform: translateY(-50%) translateX(-98%);
-    -moz-transform: translateY(-50%) translateX(-98%);
-    -ms-transform: translateY(-50%) translateX(-98%);
-    -o-transform: translateY(-50%) translateX(-98%);
     transform: translateY(-50%) translateX(-98%);
   }
 }
-@-webkit-keyframes cd-sequence-reverse {
-  0% {
-    -webkit-transform: translateY(-50%) translateX(-98%);
-  }
-  100% {
-    -webkit-transform: translateY(-50%) translateX(-2%);
-  }
-}
-@-moz-keyframes cd-sequence-reverse {
-  0% {
-    -moz-transform: translateY(-50%) translateX(-98%);
-  }
-  100% {
-    -moz-transform: translateY(-50%) translateX(-2%);
-  }
-}
+
 @keyframes cd-sequence-reverse {
   0% {
-    -webkit-transform: translateY(-50%) translateX(-98%);
-    -moz-transform: translateY(-50%) translateX(-98%);
-    -ms-transform: translateY(-50%) translateX(-98%);
-    -o-transform: translateY(-50%) translateX(-98%);
     transform: translateY(-50%) translateX(-98%);
   }
   100% {
-    -webkit-transform: translateY(-50%) translateX(-2%);
-    -moz-transform: translateY(-50%) translateX(-2%);
-    -ms-transform: translateY(-50%) translateX(-2%);
-    -o-transform: translateY(-50%) translateX(-2%);
     transform: translateY(-50%) translateX(-2%);
   }
 }
