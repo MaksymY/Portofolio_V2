@@ -4,12 +4,13 @@ svg{
     transform: translate(-27%, 0%);
     position: relative;
 }
+
 #Dessin_maks{
     stroke-dasharray: 10000;
     stroke-dashoffset: 10000;
     animation: draw 4s linear forwards;
-
 }
+
 @keyframes draw {
     from {
         stroke-dashoffset: 10000;

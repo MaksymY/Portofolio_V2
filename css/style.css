@@ -30,7 +30,13 @@ a {
   background-color: #a5c4bc;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.3s;
+  position: fixed;
+  bottom: 0;
+  margin-top: 10%;
+  width: 100vw;
+  text-align: center;
 }
+
 .no-touch .cd-btn:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
@@ -58,6 +64,7 @@ h2 {
   display: flex;
   justify-content: flex-start;
 }
+
 @media only screen and (min-width: 768px) {
   h2 {
     font-size: 3rem;
@@ -68,6 +75,12 @@ p{
   padding: 2%;
   margin-bottom: 2%;
   line-height: 120%;
+}
+
+img{
+  width: 20%;
+  height: 12%;
+  bottom: 10%
 }
 
 /* Main Content */
@@ -82,10 +95,10 @@ p{
 }
 .cd-main-content .Principale {
   /* vertically align inside parent element */
-  height: 100vh;
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 20%
 }
 
 /* Modal window */
@@ -167,6 +180,7 @@ p{
   transition: transform 0.3s 0s, visibility 0s 0s, opacity 0.3s 0s;
   transform: scale(1);
 }
+
 @media only screen and (min-width: 1100px) {
   .cd-modal .modal-content {
     padding: 6em 5%;
