@@ -20,6 +20,22 @@ a {
 }
 
 /* Patterns - reusable parts of our design */
+.first_element{
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width:800px){
+  .first_element{
+    display: flex;
+    flex-direction: row;
+  }
+  .description{
+    width: 80%;
+    font-size: 40px;
+  }
+
+}
+
 .cd-btn {
   padding: 1.6em 2.4em;
   font-size: 1.4rem;
@@ -45,11 +61,13 @@ a {
 h1 {
   font-size: 2.6rem;
   line-height: 1;
-  margin-bottom: 1em;
   font-family: "IM Fell Double Pica", serif;
-  padding: 5%;
+  margin-top: 4%;
+  padding: 2%;
 }
+
 @media only screen and (min-width: 768px) {
+  
   h1 {
     font-size: 5rem;
   }
@@ -70,8 +88,14 @@ h2 {
     font-size: 3rem;
   }
 }
-
-p{
+.description{
+  padding: 2%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  line-height: 120%;
+  font-size: 15px;
+}
+.framework{
   padding: 2%;
   margin-top: 5%;
   margin-bottom: 2%;
@@ -79,7 +103,23 @@ p{
   font-size: 15px;
 }
 /* images */
+.reseau{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#github{
+  height: 12%;
+  width: 12%;
+  margin-bottom: 5%;
+  margin-left: 10%
+}
 
+#dribbble{
+  height: 12%;
+  width: 12%;
+  margin-bottom: 5%;
+}
 .competance{
   width: 100%;
   height: 100%;
@@ -93,7 +133,7 @@ p{
 }
 .CV{
   width: 40%;
-  height: 5%;
+  height: 4.5%;
   position: absolute;
   top: 20%;
   left: 83%;
@@ -105,7 +145,7 @@ p{
 
 .Contact{
   width: 40%;
-  height: 5%;
+  height: 4.5%;
   position: absolute;
   top: 27%;
   left: 83%;
@@ -216,6 +256,7 @@ p{
 }
 
 @media only screen and (min-width: 1100px) {
+  
   .cd-modal .modal-content {
     padding: 6em 5%;
   }
