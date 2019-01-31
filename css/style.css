@@ -32,6 +32,19 @@ a {
   .description{
     width: 80%;
     font-size: 40px;
+    margin-right: 20%;
+  }
+  .github{
+    height: 5%;
+    width: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%
+  }
+  
+  .dribbble{
+    height: 5%;
+    width: 5%;
+    margin-bottom: 5%;
   }
 
 }
@@ -108,14 +121,14 @@ h2 {
   flex-direction: row;
   justify-content: center;
 }
-#github{
+.github{
   height: 12%;
   width: 12%;
   margin-bottom: 5%;
   margin-left: 10%
 }
 
-#dribbble{
+.dribbble{
   height: 12%;
   width: 12%;
   margin-bottom: 5%;
