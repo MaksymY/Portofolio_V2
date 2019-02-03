@@ -60,3 +60,5 @@ jQuery(document).ready(function($){
 		resize = false;
 	}
 });
+
+AOS.init();

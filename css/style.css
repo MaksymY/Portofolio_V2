@@ -35,16 +35,19 @@ a {
     margin-right: 20%;
   }
   .github{
-    height: 5%;
-    width: 5%;
+    height: 4% !important;
+    width: 4% !important;
     margin-bottom: 5%;
     margin-left: 10%
   }
   
   .dribbble{
-    height: 5%;
-    width: 5%;
+    height: 4% !important;
+    width: 4% !important;
     margin-bottom: 5%;
+  }
+  .h1{
+    margin-top: 2%;
   }
 
 }
