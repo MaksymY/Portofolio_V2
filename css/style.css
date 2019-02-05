@@ -24,70 +24,7 @@ a {
   display: flex;
   flex-direction: column;
 }
-@media (min-width:800px){
-  .first_element{
-    display: flex;
-    flex-direction: row;
-  }
-  .description{
-    width: 80%;
-    font-size: 40px;
-    margin-right: 20%;
-  }
-  .github{
-    height: 4% !important;
-    width: 4% !important;
-    margin-bottom: 5%;
-    margin-left: 10%
-  }
-  
-  .dribbble{
-    height: 4% !important;
-    width: 4% !important;
-    margin-bottom: 5%;
-  }
-  .h1{
-    margin-top: 2%;
-  }
 
-}
-
-.cd-btn {
-  padding: 1.6em 2.4em;
-  font-size: 1.4rem;
-  letter-spacing: .15em;
-  color: #ffffff;
-  font-weight: bold;
-  text-transform: uppercase;
-  background-color: #a5c4bc;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.3s;
-  position: fixed;
-  bottom: 0;
-  margin-top: 10%;
-  width: 100vw;
-  text-align: center;
-}
-
-.no-touch .cd-btn:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Typography */
-h1 {
-  font-size: 2.6rem;
-  line-height: 1;
-  font-family: "IM Fell Double Pica", serif;
-  margin-top: 4%;
-  padding: 2%;
-}
-
-@media only screen and (min-width: 768px) {
-  
-  h1 {
-    font-size: 5rem;
-  }
-}
 
 h2 {
   font-size: 3rem;
@@ -102,6 +39,7 @@ h2 {
 @media only screen and (min-width: 768px) {
   h2 {
     font-size: 3rem;
+    margin-top:-1%;
   }
 }
 .description{
@@ -125,14 +63,12 @@ h2 {
   justify-content: center;
 }
 .github{
-  height: 12%;
   width: 12%;
   margin-bottom: 5%;
   margin-left: 10%
 }
 
 .dribbble{
-  height: 12%;
   width: 12%;
   margin-bottom: 5%;
 }
@@ -363,4 +299,102 @@ h2 {
 ul li{
   font-size: 30px;
   margin-bottom: 10%;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 3rem;
+    margin-top:-1%;
+  }
+}
+
+
+.cd-btn {
+  padding: 1.6em 2.4em;
+  font-size: 1.4rem;
+  letter-spacing: .15em;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #a5c4bc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s;
+  position: fixed;
+  bottom: 0;
+  margin-top: 10%;
+  width: 100vw;
+  text-align: center;
+}
+
+.no-touch .cd-btn:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1 {
+  font-size: 2.6rem;
+  line-height: 1;
+  font-family: "IM Fell Double Pica", serif;
+  margin-top: 4%;
+  padding: 2%;
+}
+
+@media only screen and (min-width: 768px) {
+  
+  h1 {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width:800px){
+  .first_element{
+    display: flex;
+    flex-direction: row;
+  }
+  .description{
+    font-size: 2rem;
+    width: 80%;
+    margin-right: 20%;
+  }
+  .github{
+    width: 8% !important;
+    margin-bottom: 5%;
+    margin-left: 10%
+  }
+  
+  .dribbble{
+    width: 8% !important;
+    margin-bottom: 5%;
+  }
+  .h1{
+    margin-top: 2%;
+  }
+  .CV{
+    width: 20% !important;
+    height: 2.5% !important;
+    position: absolute;
+    top: 24%;
+    left: 92%;
+    transition: 0.5s;
+  }
+  .Contact{
+    width: 20% !important;
+    height: 2.5% !important;
+    position: absolute;
+    top: 20%;
+    left: 92%;
+    transition: 0.5s;
+  }
+  .CV:hover {
+    left: 80%;
+  }
+  .Contact:hover {
+    left: 80%;
+  }
+  .cd-btn{
+    width: 20vw;
+    position: absolute;
+    left:40%;
+    margin-bottom: 3%;
+    
+  }
 }
