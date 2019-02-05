@@ -10,6 +10,14 @@
     stroke-dashoffset: 10000;
     animation: draw 4s linear forwards;
 }
+#Calque_1{
+    display: hidden;
+}
+#computer{
+    stroke-dasharray: 10000;
+    stroke-dashoffset: 10000;
+    animation: draw 4s linear forwards;
+}
 
 @keyframes draw {
     from {
