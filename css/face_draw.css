@@ -16,7 +16,7 @@
 #computer{
     stroke-dasharray: 10000;
     stroke-dashoffset: 10000;
-    animation: draw 4s linear forwards;
+    animation: draw 4s linear forwards 5s;
 }
 
 @keyframes draw {
