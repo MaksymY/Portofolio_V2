@@ -69,7 +69,7 @@ h2 {
 }
 
 .dribbble{
-  width: 12%;
+  width: 40%;
   margin-bottom: 5%;
 }
 .competance{
@@ -152,10 +152,16 @@ h2 {
   justify-content: center;
   flex-direction: row;
 }
-
+#Calque_1{
+  width: 100%;
+  height: 100%;
+  transform: translate(25%, 0%);
+  position: relative;
+}
 .cd-modal h1 {
   text-align: center;
   margin-top:3%;
+  color:  #e4dcca;
 }
 .cd-modal h1::after {
   /* ink/brush separation */
@@ -167,10 +173,10 @@ h2 {
   margin: .2em auto 0;
 }
 .cd-modal p {
-  justify-content: flex-start;
   line-height: 1.6;
   margin-left:5%;
   max-width: 53%;
+  margin-top: 9%;
 }
 .cd-modal .modal-close {
   /* 'X' icon */
@@ -266,11 +272,8 @@ h2 {
 }
 
 .image_vintage{
-  max-width:30%;
-  max-height:100%;
-  left:60%;
-  top:10%;
-  position: relative;
+  width:30%;
+  height:10%;
 
 }
 
@@ -324,6 +327,12 @@ ul li{
 
 .no-touch .cd-btn:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.first_content_work{
+  display: flex;
+  margin-top: 2%;
+  justify-content:center;
 }
 
 /* Typography */
